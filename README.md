@@ -46,3 +46,7 @@ app.get("/", (req, res) => {
 ```js
 app.use(express.static(path.join(__dirname, "public")));
 ```
+
+> [!NOTE]
+> you need to recreate the `__dirname` and `__filename` variables when using the
+> modern "module" style of writing JavaScript
