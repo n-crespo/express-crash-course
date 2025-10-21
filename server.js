@@ -17,13 +17,12 @@ const __dirname = path.dirname(__filename);
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// routs
-
 // error handler/middlware
 app.use(logger);
 
 app.use(express.static(path.join(__dirname, "public")));
 
+// routes
 app.use("/api/posts", posts);
 app.use(notFound);
 app.use(errorHandler);
