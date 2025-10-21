@@ -1,12 +1,13 @@
 # Some HTTP Codes
 
 
-| Codes           | Meaning         |
-| --------------- | --------------- |
-| 200             | Success         |
-| 300             | Redirect        |
-| 400             | Client Error    |
-| 500             | Server Error    |
+| Codes           | Meaning          |
+| --------------- | ---------------  |
+| 200             | Success          |
+| 201             | Sucess (created) |
+| 300             | Redirect         |
+| 400             | Client Error     |
+| 500             | Server Error     |
 
 
 ## Dealing with query params

@@ -4,6 +4,10 @@ import posts from "./routs/posts.js";
 // initialize express
 const app = express();
 
+// body parser middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 // setup static folder (middleware)
 // app.use(express.static(path.join(__dirname, "public")));
 
