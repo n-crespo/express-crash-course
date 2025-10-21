@@ -1,7 +1,8 @@
 import express from "express";
-import posts from "./routs/posts.js";
+import posts from "./routes/posts.js";
 import logger from "./middleware/logger.js";
 import errorHandler from "./middleware/error.js";
+import notFound from "./middleware/notFound.js";
 
 // initialize express
 const app = express();
@@ -10,14 +11,12 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-// logger middleware
-app.use(logger);
-app.use(errorHandler);
-
-// setup static folder (middleware)
-// app.use(express.static(path.join(__dirname, "public")));
-
-// Routs
+// routs
 app.use("/api/posts", posts);
+
+// error handler/middlware
+app.use(logger);
+app.use(notFound);
+app.use(errorHandler);
 
 app.listen(8000, () => console.log("server is running on port 8000"));

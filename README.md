@@ -40,3 +40,9 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 ```
+
+## Static folder setup:
+
+```js
+app.use(express.static(path.join(__dirname, "public")));
+```
